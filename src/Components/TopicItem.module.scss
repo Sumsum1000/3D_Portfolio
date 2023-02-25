@@ -1,0 +1,21 @@
+$space: 10px;
+$margin-nav: 40px;
+$primery_1: rgb(222, 222, 222);
+$secondery_1: rgb(234, 101, 53);
+
+body {
+  background-color: rgb(208, 208, 208);
+}
+
+.subject-container {
+  //background-color: gray;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    //background-color: brown;
+    text-align: center;
+  }
+}

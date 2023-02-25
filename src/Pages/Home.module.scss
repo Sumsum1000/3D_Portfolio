@@ -1,0 +1,28 @@
+$space: 10px;
+$margin-nav: 40px;
+$primery_1: rgb(222, 222, 222);
+$secondery_1: rgb(234, 101, 53);
+
+//General
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.home-container {
+  display: flex;
+  //background-color: rgb(183, 9, 227);
+  gap: $space;
+  margin-top: 80px;
+
+  .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .subject-container {
+    //background-color: antiquewhite;
+    flex: 1;
+  }
+}

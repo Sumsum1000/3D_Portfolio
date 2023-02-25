@@ -1,0 +1,13 @@
+.closeup-container {
+  //background-color: tomato;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 91vh;
+  .closeup {
+    height: 92%;
+    border: 2px solid black;
+  }
+}
