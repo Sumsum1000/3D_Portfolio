@@ -16,6 +16,7 @@ export const Home = () => {
   const listMap = {
     architecture: ArchData,
     exhibitions: ExhibitionData,
+    personal: [],
   };
 
   //   const listDataHandler = () => {

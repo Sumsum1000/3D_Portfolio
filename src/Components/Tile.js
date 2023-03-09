@@ -47,7 +47,6 @@ export const Tile = ({ onClick, list, onClickMe }) => {
       </div>
     );
   } else {
-    console.log("1 Item ", list[0]);
     dispatch(CloseupActions.setCloseup(list[0]));
     return <Closeup />;
   }

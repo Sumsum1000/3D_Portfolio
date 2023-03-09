@@ -28,9 +28,9 @@ const TopicSlice = createSlice({
     setList(state, action) {
       state.list = action.payload;
     },
-    setArchList(state) {
-      state.list = ArchData;
-    },
+    // setArchList(state) {
+    //   state.list = ArchData;
+    // },
   },
 });
 
@@ -47,13 +47,46 @@ const TileDetailsSlice = createSlice({
 
 const CloseupSlice = createSlice({
   name: "closeup",
-  initialState: { currentCloseup: "" },
+  initialState: { currentCloseup: "", currentItem: {} },
   reducers: {
     setCloseup(state, action) {
+      // state.currentCloseup =
+      //   dataMap[`${action.payload.subject}`][action.payload.listNum - 1][
+      //     action.payload.id - 1
+      //   ].src; //Arch_1[0].src;
+
+      const subject = action.payload.subject;
+      const listNum = action.payload.listNum; // `Arch_${listNum}`
+      const currentList = dataMap[`${subject}`][`${listNum - 1}`];
+      const currentItem = currentList[`${action.payload.id - 1}`];
+
+      state.currentCloseup = currentItem.src;
+    },
+    setItem(state, action) {
+      //console.log("setItem", action.payload);
+      state.currentItem = action.payload;
+    },
+    setCloseupRClick(state, action) {
+      //console.log("Item ", state.currentItem);
+      console.log("A ", state.currentItem);
       state.currentCloseup =
         dataMap[`${action.payload.subject}`][action.payload.listNum - 1][
-          action.payload.id - 1
+          action.payload.id + 1
         ].src; //Arch_1[0].src;
+      //   state.currentCloseup =
+      //     dataMap[`${state.currentItem.subject}`][state.currentItem.listNum - 1][
+      //       state.currentItem.id + 1
+      //     ][state.currentItem.src]; //Arch_1[0].src;
+    },
+  },
+});
+
+export const CurrentItemSlice = createSlice({
+  name: "currentItem",
+  initialState: { currentItem: {} },
+  reducers: {
+    setCurrentItem(state, action) {
+      state.currentItem = action.payload;
     },
   },
 });
@@ -63,9 +96,11 @@ export const Store = configureStore({
     topicListPage: TopicSlice.reducer,
     details: TileDetailsSlice.reducer,
     closeup: CloseupSlice.reducer,
+    currentItem: CurrentItemSlice.reducer,
   },
 });
 
 export const TopicListActions = TopicSlice.actions;
 export const TileDetailsActions = TileDetailsSlice.actions;
 export const CloseupActions = CloseupSlice.actions;
+export const CurrenItemActions = CurrentItemSlice.actions;

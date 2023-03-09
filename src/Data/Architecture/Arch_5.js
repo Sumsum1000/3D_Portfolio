@@ -7,7 +7,6 @@ export const Arch_5 = [
     subject: "architecture",
     type: "img",
     id: 1,
-    key: 1,
     src: Arch_5_1,
     title: "Brosh Alon - Arsuf",
     text: "",
