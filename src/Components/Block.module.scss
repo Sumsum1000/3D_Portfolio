@@ -23,3 +23,9 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .border-div {
+    height: calc(100vw / 1);
+  }
+}
