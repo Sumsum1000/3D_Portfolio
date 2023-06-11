@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Arch_2 } from "../../Data/Architecture/Arch_2";
 
 export const closeupContext = React.createContext({
   closeup: "",

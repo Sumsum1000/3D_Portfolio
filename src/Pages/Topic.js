@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { Tile } from "../Components/Tile";
-import { ArchData } from "../Data/ArchData";
 import { TileDetailsActions } from "../Components/_Store/Store";
 
 export const Topic = () => {

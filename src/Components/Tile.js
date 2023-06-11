@@ -1,11 +1,8 @@
 import { Block } from "./Block";
 import style from "./Tile.module.scss";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BlockVideo } from "./BlockVideo";
 import { useSelector, useDispatch } from "react-redux";
-//import { TileDetailsActions } from "./_Store/Store";
-import { TileDetailsActions } from "./_Store/Store";
 import { CloseupActions } from "./_Store/Store";
 import { Closeup } from "../Pages/Closeup";
 
@@ -29,8 +26,8 @@ export const Tile = ({ onClick, list, onClickMe }) => {
                   name={item.name}
                   type={item.type}
                   src={item.src}
-                  //onClick={() => dispatch(TileDetailsActions.setDetails(item))}
                   onClick={() => onClickMe(item)}
+                  //passId={(id) => console.log("ididid ", id)} // getting ID working
                 />
               </Link>
             );

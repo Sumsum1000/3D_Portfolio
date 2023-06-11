@@ -1,39 +1,27 @@
 import style from "./Navbar.module.scss";
-import { Link, NavLink, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { SubjectTileContext } from "./Context/SubjectTileContext";
-import { useContext, useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { ArchData } from "../Data/ArchData";
 import { ExhibitionData } from "../Data/ExhibitionData";
 import { TopicListActions } from "./_Store/Store";
+import { PersonalData } from "../Data/PersonalData";
 
 export const NavBar = () => {
   const links = ["architecture", "exhibitions", "personal"];
-  // const { subjectTile, setSubjectTile } = useContext(SubjectTileContext);
-
-  // const [topic, setTopic] = useState([]);
 
   const dispatch = useDispatch();
 
   const listMap = {
     architecture: ArchData,
     exhibitions: ExhibitionData,
+    personal: PersonalData,
   };
-
-  // useEffect(() => {
-  //   if (subjectTile === "architecture") {
-  //     setTopic(ArchData);
-  //   }
-  //   if (subjectTile === "exhibitions") {
-  //     setTopic(ExhibitionData);
-  //   }
-  // }, []);
 
   return (
     <nav className={style["navbar"]}>
       <NavLink key={Math.random()} to="/" className={style["nav-title"]}>
         {" "}
-        My Portfolio
+        My 3D Portfolio
       </NavLink>
       <NavLink
         to="/"

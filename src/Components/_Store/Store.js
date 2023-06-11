@@ -1,5 +1,4 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
-import { ArchData } from "../../Data/ArchData";
 import { Arch_1 } from "../../Data/Architecture/Arch_1";
 import { Arch_2 } from "../../Data/Architecture/Arch_2";
 import { Arch_3 } from "../../Data/Architecture/Arch_3";
@@ -15,10 +14,24 @@ import { Exh_6 } from "../../Data/Exhibitions/Exh_6";
 import { Exh_7 } from "../../Data/Exhibitions/Exh_7";
 import { Exh_8 } from "../../Data/Exhibitions/Exh_8";
 import { Exh_9 } from "../../Data/Exhibitions/Exh_9";
+import { Personal_1 } from "../../Data/Personal/Personal_1";
+import { Personal_2 } from "../../Data/Personal/Personal_2";
+import { Personal_3 } from "../../Data/Personal/Personal_3";
+import { Personal_4 } from "../../Data/Personal/Personal_4";
+import { Personal_5 } from "../../Data/Personal/Personal_5";
+import { Personal_6 } from "../../Data/Personal/Personal_6";
 
 const dataMap = {
   architecture: [Arch_1, Arch_2, Arch_3, Arch_4, Arch_5, Arch_6],
   exhibitions: [Exh_1, Exh_2, Exh_3, Exh_4, Exh_5, Exh_6, Exh_7, Exh_8, Exh_9],
+  personal: [
+    Personal_1,
+    Personal_2,
+    Personal_3,
+    Personal_4,
+    Personal_5,
+    Personal_6,
+  ],
 };
 
 const TopicSlice = createSlice({
@@ -28,9 +41,6 @@ const TopicSlice = createSlice({
     setList(state, action) {
       state.list = action.payload;
     },
-    // setArchList(state) {
-    //   state.list = ArchData;
-    // },
   },
 });
 
@@ -59,6 +69,7 @@ const CloseupSlice = createSlice({
       const listNum = action.payload.listNum; // `Arch_${listNum}`
       const currentList = dataMap[`${subject}`][`${listNum - 1}`];
       const currentItem = currentList[`${action.payload.id - 1}`];
+      console.log("CURRENTiTEM : ", currentItem);
 
       state.currentCloseup = currentItem.src;
     },

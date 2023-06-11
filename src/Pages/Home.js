@@ -2,26 +2,20 @@ import style from "./Home.module.scss";
 import { subjectsList } from "../Data/HomeData";
 import { Link } from "react-router-dom";
 import { TopicItem } from "../Components/TopicItem";
-import { useContext, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { TopicListActions } from "../Components/_Store/Store";
-import { SubjectTileContext } from "../Components/Context/SubjectTileContext";
 import { ArchData } from "../Data/ArchData";
 import { ExhibitionData } from "../Data/ExhibitionData";
+import { PersonalData } from "../Data/PersonalData";
 
 export const Home = () => {
-  //const [subject, setSubject] = useState("");
   const dispatch = useDispatch();
 
   const listMap = {
     architecture: ArchData,
     exhibitions: ExhibitionData,
-    personal: [],
+    personal: PersonalData,
   };
-
-  //   const listDataHandler = () => {
-  //     dispatch(TopicListActions.setList(ExhibitionData));
-  //   };
 
   return (
     <div className={style["home-container"]}>
