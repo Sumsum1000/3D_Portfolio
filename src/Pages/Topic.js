@@ -1,17 +1,28 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { Tile } from "../Components/Tile";
-import { TileDetailsActions } from "../Components/_Store/Store";
+import { TileDetailsActions, TopicListActions } from "../Components/_Store/Store";
+import { ArchData } from "../Data/ArchData";
+import { ExhibitionData } from "../Data/ExhibitionData";
+import { PersonalData } from "../Data/PersonalData";
+
+const listMap = {
+  architecture: ArchData,
+  exhibitions: ExhibitionData,
+  personal: PersonalData,
+};
 
 export const Topic = () => {
+  const { subject } = useParams();
   const { list } = useSelector((state) => state.topicListPage);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log("list ", list);
-  }, []);
+    dispatch(TopicListActions.setList(listMap[subject]));
+  }, [subject, dispatch]);
 
-  if (list) {
+  if (list.length > 0) {
     return (
       <Tile
         list={list}

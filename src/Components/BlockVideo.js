@@ -10,6 +10,8 @@ export const BlockVideo = ({ src, onClick, id, name }) => {
         autoPlay
         muted
         loop
+        playsInline
+        preload="auto"
       >
         <source src={src} type="video/mp4" />
       </video>
