@@ -1,6 +1,6 @@
 import style from "./InteractiveSection.module.scss";
 
-const LEGO_URL = "[LEGO_URL]";
+const LEGO_URL = "https://lego-theta.vercel.app/";
 const LEGO_VIDEO_URL = "[LEGO_VIDEO_URL]";
 
 export const InteractiveSection = () => {
