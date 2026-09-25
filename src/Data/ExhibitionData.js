@@ -8,6 +8,8 @@ import Exh_7 from "../Images/Subjects/Exhibitions/ExhibitionsMain/Exhibition_7.j
 import Exh_8 from "../Images/Subjects/Exhibitions/ExhibitionsMain/Exhibition_8.jpg";
 //import Exh_9 from "../Images/Subjects/Exhibitions/ExhibitionsMain/Exhibition_9.jpg";
 
+const CONTRIBUTION = "Lighting, materials & composition on a client-provided design";
+
 export const ExhibitionData = [
   {
     name: "Exhibition_1",
@@ -16,8 +18,8 @@ export const ExhibitionData = [
     id: 1,
     key: 1,
     src: Exh_1,
-    title: "Nurit Leshem",
-    text: "",
+    title: "[PROJECT TITLE]",
+    text: CONTRIBUTION,
   },
   {
     name: "Exhibition_2",
@@ -26,8 +28,8 @@ export const ExhibitionData = [
     id: 2,
     key: 2,
     src: Exh_2,
-    title: "Natalia",
-    text: "",
+    title: "[PROJECT TITLE]",
+    text: CONTRIBUTION,
   },
   {
     name: "Exhibition_3",
@@ -36,8 +38,8 @@ export const ExhibitionData = [
     id: 3,
     key: 3,
     src: Exh_3,
-    title: "Brosh Alon - Arsuf",
-    text: "",
+    title: "[PROJECT TITLE]",
+    text: CONTRIBUTION,
   },
   {
     name: "Exhibition_4",
@@ -46,8 +48,8 @@ export const ExhibitionData = [
     id: 4,
     key: 4,
     src: Exh_4,
-    title: "Pivate",
-    text: "",
+    title: "[PROJECT TITLE]",
+    text: CONTRIBUTION,
   },
   {
     name: "Exhibition_5",
@@ -56,8 +58,8 @@ export const ExhibitionData = [
     id: 5,
     key: 5,
     src: Exh_5,
-    title: "Brosh Alon - exterior",
-    text: "",
+    title: "[PROJECT TITLE]",
+    text: CONTRIBUTION,
   },
   {
     name: "Exhibition_6",
@@ -66,8 +68,8 @@ export const ExhibitionData = [
     id: 6,
     key: 6,
     src: Exh_6,
-    title: "Brosh Alon - exterior",
-    text: "",
+    title: "[PROJECT TITLE]",
+    text: CONTRIBUTION,
   },
   {
     name: "Exhibition_7",
@@ -76,8 +78,8 @@ export const ExhibitionData = [
     id: 7,
     key: 7,
     src: Exh_7,
-    title: "Brosh Alon - exterior",
-    text: "",
+    title: "[PROJECT TITLE]",
+    text: CONTRIBUTION,
   },
   {
     name: "Exhibition_8",
@@ -86,8 +88,8 @@ export const ExhibitionData = [
     id: 8,
     key: 8,
     src: Exh_8,
-    title: "Brosh Alon - exterior",
-    text: "",
+    title: "[PROJECT TITLE]",
+    text: CONTRIBUTION,
   },
   // {
   //   name: "Exhibition_9",

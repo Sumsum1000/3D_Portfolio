@@ -28,6 +28,11 @@ export const Tile = ({ onClick, list, onClickMe }) => {
                   src={item.src}
                   onClick={() => onClickMe(item)}
                   //passId={(id) => console.log("ididid ", id)} // getting ID working
+                  caption={
+                    item.subject === "exhibitions"
+                      ? { title: item.title, contribution: item.text }
+                      : null
+                  }
                 />
               </Link>
             );

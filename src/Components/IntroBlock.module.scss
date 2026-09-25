@@ -1,0 +1,38 @@
+$secondery_1: rgb(234, 101, 53);
+
+.intro {
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+
+  .name {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .role {
+    font-size: 18px;
+    margin: 8px 0 12px;
+    color: rgb(60, 60, 60);
+  }
+
+  .links {
+    font-size: 16px;
+
+    a {
+      color: $secondery_1;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .divider {
+      margin: 0 10px;
+      color: rgb(150, 150, 150);
+    }
+  }
+}
