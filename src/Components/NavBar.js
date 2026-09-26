@@ -33,7 +33,7 @@ export const NavBar = () => {
             isActive ? style["active"] : style["no-active"]
           }
         >
-          Work
+          Home
         </NavLink>
         {links.map((link) => {
           return (
