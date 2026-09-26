@@ -36,7 +36,6 @@ export const RendersSection = () => {
           >
             <img className={style["image"]} src={item.src} alt={item.name} />
             <span className={style["caption"]}>
-              <span className={style["project-name"]}>[Project name]</span>
               <span className={style["category"]}>{item.title}</span>
             </span>
           </Link>
