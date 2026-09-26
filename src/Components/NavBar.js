@@ -6,7 +6,7 @@ import { ExhibitionData } from "../Data/ExhibitionData";
 import { TopicListActions } from "./_Store/Store";
 import { PersonalData } from "../Data/PersonalData";
 
-const LINKEDIN_URL = "[LINKEDIN_URL]";
+const LINKEDIN_URL = "https://www.linkedin.com/in/asaf--levi/";
 
 export const NavBar = () => {
   const links = ["architecture", "exhibitions", "personal"];
