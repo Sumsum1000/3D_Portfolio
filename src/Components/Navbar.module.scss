@@ -1,48 +1,94 @@
-$margin-nav: 40px;
-$primery_1: rgb(222, 222, 222);
-$secondery_1: rgb(234, 101, 53);
+$bg: #141412;
+$border: #2e2d2a;
+$divider: #3a3935;
+$text: #eeebe4;
+$muted: #a7a39a;
+$muted-2: #c9c5bc;
+$accent: #f08a5d;
 
 .navbar {
-  width: 100vw;
-  height: 50px;
-  max-width: var(1920px);
-  margin: 0 auto;
-  padding-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 50px;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 50px;
-  background-color: $primery_1;
-  background-color: yellow;
-  border-bottom: 1px solid $secondery_1;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 32px;
+  background-color: $bg;
+  border-bottom: 1px solid $border;
   position: fixed;
   top: 0;
-  // top: 100px;
   z-index: 3;
 
-  .nav-title {
-    margin-right: auto;
-    font-size: 24px;
-    font-weight: 700;
-    margin-left: $margin-nav;
-    color: black;
-    font-family: "Hammersmith One", sans-serif;
-  }
-
-  a {
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
     text-decoration: none;
+
+    .name {
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+      color: $text;
+    }
+
+    .role {
+      font-size: 13px;
+      color: $muted;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
     font-weight: 500;
-  }
+    flex-wrap: wrap;
 
-  a:last-child {
-    margin-right: $margin-nav;
-  }
+    a {
+      text-decoration: none;
+    }
 
-  .active {
-    color: $secondery_1;
-  }
+    .divider {
+      width: 1px;
+      height: 20px;
+      background-color: $divider;
+      margin: 0 6px;
+    }
 
-  .no-active {
-    color: rgb(0, 0, 0);
+    .no-active {
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: $muted-2;
+    }
+
+    .active {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background-color: $text;
+      color: $bg;
+    }
+
+    .accent-link {
+      padding: 8px 6px;
+      color: $accent;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+
+    .nav-links {
+      gap: 4px;
+    }
   }
 }

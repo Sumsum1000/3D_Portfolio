@@ -9,26 +9,15 @@ a {
   color: black;
 }
 
-.home-container {
-  display: flex;
-  //background-color: rgb(183, 9, 227);
-  gap: $space;
-  margin-top: 30px;
-
-  .title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .subject-container {
-    //background-color: antiquewhite;
-    flex: 1;
-  }
+.home-page {
+  background-color: #141412;
+  color: #eeebe4;
+  min-height: 100vh;
+  padding-top: 96px;
 }
 
 @media only screen and (max-width: 600px) {
-  .home-container {
-    flex-direction: column;
+  .home-page {
+    padding-top: 0;
   }
 }

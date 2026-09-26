@@ -6,11 +6,64 @@ const LEGO_VIDEO_URL = "[LEGO_VIDEO_URL]";
 
 export const InteractiveSection = () => {
   return (
-    <div className={style["interactive-section"]}>
-      <h2 className={style["section-title"]}>Interactive / Real-time</h2>
-      <div className={style["project-card"]}>
+    <section className={style["hero"]}>
+      <div className={style["hero-info"]}>
+        <span className={style["eyebrow"]}>
+          <span className={style["dot"]}></span>
+          Latest &middot; Interactive
+        </span>
+        <h1 className={style["title"]}>LEGO Assembly System</h1>
+        <p className={style["description"]}>
+          Real-time, in-browser 3D build experience. [One or two lines: what
+          it does and what you built]
+        </p>
+        <div className={style["tags"]}>
+          <span className={style["tag"]}>Real-time 3D</span>
+          <span className={style["tag"]}>[Three.js / Unity WebGL]</span>
+          <span className={style["tag"]}>Best on desktop</span>
+        </div>
+        <div className={style["actions"]}>
+          <a
+            className={style["demo-button"]}
+            href={LEGO_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Try the live demo
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </a>
+          <a
+            className={style["video-button"]}
+            href={LEGO_VIDEO_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M7 5l12 7-12 7z"></path>
+            </svg>
+            Video
+          </a>
+        </div>
+      </div>
+      <div className={style["preview-panel"]}>
         <video
-          className={style["thumbnail"]}
+          className={style["preview-video"]}
           autoPlay
           muted
           loop
@@ -19,29 +72,7 @@ export const InteractiveSection = () => {
         >
           <source src={LegoIntroVideo} type="video/mp4" />
         </video>
-        <div className={style["project-info"]}>
-          <h3 className={style["project-title"]}>LEGO Assembly System</h3>
-          <div className={style["actions"]}>
-            <a
-              className={style["demo-button"]}
-              href={LEGO_URL}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Live demo
-            </a>
-            <span className={style["note"]}>Best on desktop</span>
-            <a
-              className={style["video-link"]}
-              href={LEGO_VIDEO_URL}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Video
-            </a>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   );
 };

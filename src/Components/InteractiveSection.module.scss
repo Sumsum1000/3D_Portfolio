@@ -1,80 +1,148 @@
-$secondery_1: rgb(234, 101, 53);
+$bg-panel: #0a0a0b;
+$border: #2e2d2a;
+$text: #f5f2eb;
+$muted: #b9b5ac;
+$muted-2: #c9c5bc;
+$divider: #3a3935;
+$accent: #f08a5d;
+$dark: #141412;
 
-.interactive-section {
-  padding: 0 20px 30px;
-  max-width: 800px;
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 440px) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+  padding: 48px 32px 56px;
+  max-width: 1280px;
   margin: 0 auto;
 
-  .section-title {
-    text-align: center;
-    font-family: "Hammersmith One", sans-serif;
-    margin-bottom: 15px;
-  }
-
-  .project-card {
+  .hero-info {
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    align-items: center;
-    border: 1px solid rgb(0, 0, 0);
-    padding: 15px;
-    background-color: rgb(255, 255, 255);
 
-    .thumbnail {
-      flex: 0 0 200px;
-      height: 120px;
-      object-fit: cover;
-      background-color: rgb(225, 225, 225);
-      border: 1px solid rgb(0, 0, 0);
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: $accent;
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background-color: $accent;
+      }
     }
 
-    .project-info {
-      flex: 1;
+    .title {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      font-size: 52px;
+      line-height: 1.05;
+      letter-spacing: -1px;
+      color: $text;
+    }
 
-      .project-title {
-        margin: 0 0 10px;
+    .description {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.6;
+      color: $muted;
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+
+      .tag {
+        border: 1px solid $divider;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 13px;
+        color: $muted-2;
       }
+    }
 
-      .actions {
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+
+      .demo-button {
+        background-color: $accent;
+        color: $dark;
+        text-decoration: none;
+        padding: 14px 22px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 15px;
         display: flex;
         align-items: center;
-        gap: 12px;
-        flex-wrap: wrap;
+        gap: 8px;
 
-        .demo-button {
-          background-color: $secondery_1;
-          color: white;
-          text-decoration: none;
-          padding: 8px 16px;
-          border-radius: 4px;
-
-          &:hover {
-            opacity: 0.85;
-          }
-        }
-
-        .note {
-          font-size: 13px;
-          color: rgb(120, 120, 120);
-          font-style: italic;
-        }
-
-        .video-link {
-          color: $secondery_1;
+        &:hover {
+          opacity: 0.9;
         }
       }
+
+      .video-button {
+        border: 1px solid #eeebe4;
+        color: #eeebe4;
+        text-decoration: none;
+        padding: 14px 20px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+
+  .preview-panel {
+    height: 420px;
+    background-color: $bg-panel;
+    border: 1px solid $border;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .preview-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+
+    .preview-panel {
+      height: 320px;
     }
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .interactive-section {
-    .project-card {
-      flex-direction: column;
+  .hero {
+    padding: 32px 20px 40px;
 
-      .thumbnail {
-        flex: 1;
-        width: 100%;
-      }
+    .hero-info .title {
+      font-size: 36px;
     }
   }
 }
