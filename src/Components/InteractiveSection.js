@@ -14,8 +14,9 @@ export const InteractiveSection = () => {
         </span>
         <h1 className={style["title"]}>LEGO Assembly System</h1>
         <p className={style["description"]}>
-          Real-time, in-browser 3D build experience. [One or two lines: what
-          it does and what you built]
+          Real-time, in-browser 3D build experience. Assemble a LEGO
+          spaceship step by step, then launch it. Every part hand-modeled in
+          3ds Max, built with React Three Fiber and AI-assisted development.
         </p>
         <div className={style["tags"]}>
           <span className={style["tag"]}>Real-time 3D</span>
