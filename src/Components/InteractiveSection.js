@@ -1,5 +1,5 @@
 import style from "./InteractiveSection.module.scss";
-import LegoIntroVideo from "../Images/Interactive/LegiIntro.webm";
+import LegoIntroVideo from "../Images/Interactive/LegoIntro.webm";
 
 const LEGO_URL = "https://lego-theta.vercel.app/";
 const LEGO_VIDEO_URL = "[LEGO_VIDEO_URL]";
