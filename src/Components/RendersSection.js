@@ -18,7 +18,12 @@ export const RendersSection = () => {
 
   return (
     <section className={style["renders-section"]}>
-      <h2 className={style["section-title"]}>Renders &amp; visualization</h2>
+      <div className={style["section-header"]}>
+        <h2 className={style["section-title"]}>3D Art</h2>
+        <p className={style["section-subtitle"]}>
+          Modeling, materials, lighting &amp; animation
+        </p>
+      </div>
       <div className={style["grid"]}>
         {subjectsList.map((item) => (
           <Link

@@ -8,14 +8,24 @@ $border: #2e2d2a;
   max-width: 1280px;
   margin: 0 auto;
 
-  .section-title {
-    margin: 0 0 24px;
+  .section-header {
     padding-top: 32px;
+    margin-bottom: 24px;
     border-top: 1px solid $border;
+  }
+
+  .section-title {
+    margin: 0;
     font-family: "Fraunces", serif;
     font-weight: 500;
     font-size: 28px;
     color: $text;
+  }
+
+  .section-subtitle {
+    margin: 6px 0 0;
+    font-size: 15px;
+    color: $muted;
   }
 
   .grid {
