@@ -1,5 +1,5 @@
 import style from "./InteractiveSection.module.scss";
-import LegoIntroVideo from "../Images/Interactive/LegoIntroVideo.mp4";
+import LegoIntroVideo from "../Images/Interactive/LegiIntro.webm";
 
 const LEGO_URL = "https://lego-theta.vercel.app/";
 const LEGO_VIDEO_URL = "[LEGO_VIDEO_URL]";
@@ -70,7 +70,7 @@ export const InteractiveSection = () => {
           playsInline
           preload="auto"
         >
-          <source src={LegoIntroVideo} type="video/mp4" />
+          <source src={LegoIntroVideo} type="video/webm" />
         </video>
       </div>
     </section>
