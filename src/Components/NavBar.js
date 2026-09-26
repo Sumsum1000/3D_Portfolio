@@ -52,8 +52,8 @@ export const NavBar = () => {
           );
         })}
         <span className={style["divider"]}></span>
-        <a className={style["accent-link"]} href="mailto:asaf14levi@gmail.com">
-          Email
+        <a className={style["email-link"]} href="mailto:asaf14levi@gmail.com">
+          asaf14levi@gmail.com
         </a>
         <a
           className={style["accent-link"]}
