@@ -1,5 +1,4 @@
 .border-div {
-  position: relative;
   height: calc(100vw / 3);
   box-sizing: content-box;
   overflow: hidden;
@@ -24,21 +23,6 @@
     }
   }
 
-  .caption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.65);
-    color: white;
-    padding: 8px 10px;
-    text-align: left;
-
-    .caption-text {
-      margin: 0;
-      font-size: 12px;
-    }
-  }
 }
 
 @media only screen and (max-width: 600px) {

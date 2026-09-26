@@ -11,7 +11,6 @@ export const Block = ({
   subject,
   currentDetailList,
   idHandler,
-  caption,
 }) => {
   // const dispatch = useDispatch();
 
@@ -34,11 +33,6 @@ export const Block = ({
         alt={name || ""}
         //onClick={onClick}
       />
-      {caption && (
-        <div className={style["caption"]}>
-          <p className={style["caption-text"]}>{caption}</p>
-        </div>
-      )}
     </div>
   );
 };
