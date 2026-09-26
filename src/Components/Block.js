@@ -36,8 +36,7 @@ export const Block = ({
       />
       {caption && (
         <div className={style["caption"]}>
-          <p className={style["caption-title"]}>{caption.title}</p>
-          <p className={style["caption-text"]}>{caption.contribution}</p>
+          <p className={style["caption-text"]}>{caption}</p>
         </div>
       )}
     </div>
