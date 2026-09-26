@@ -2,7 +2,7 @@ import style from "./InteractiveSection.module.scss";
 import LegoIntroVideo from "../Images/Interactive/LegoIntro.webm";
 
 const LEGO_URL = "https://lego-theta.vercel.app/";
-const LEGO_VIDEO_URL = "[LEGO_VIDEO_URL]";
+const LEGO_VIDEO_URL = "https://www.youtube.com/watch?v=Q_bYgZdz6l4";
 
 export const InteractiveSection = () => {
   return (
